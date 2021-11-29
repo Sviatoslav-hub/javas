@@ -1,23 +1,27 @@
 
-public class PublicTransport {
-    int places;
-    int transferCost;
-    String destination;
+public abstract class PublicTransport {
+    // взнати що таке протектед.
+    protected int places;
+    protected int transferCost;
+    protected String destination;
 
-    public void methodDelivery(String name) {
-        this.destination = destination;
-        System.out.println("I'm going to " + destination);
+
+    protected static void alarm (){
+        System.out.println("Alarm!!!!");
     }
 
-    public void methodPlaces(int places) {
-        this.places = places;
-        System.out.println("I'm having " + places + " places");
+    protected static void clickButton(String element){
+        System.out.println("clicks element");
     }
 
-    public void methodTransferCost(int transferCost) {
-        this.transferCost = transferCost;
-        System.out.println("This transfer costs " + transferCost);
-    }
+
+    protected abstract void methodDelivery();
+
+    public abstract void methodPlaces();
+
+    public abstract void methodTransferCost();
+
+    public abstract void methodName();
 
 
 }
